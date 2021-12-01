@@ -4,7 +4,7 @@ _your zenodo badge here_
 
 **Will anthropogenic warming increase Evapotranspiration? Examining Irrigation Water Demand Implications of Climate Change in California**
 
-P. Vahmani<sup>1\*</sup>, A. D. Jones<sup>1</sup>, and D. Li<sup>2</sup>
+P. Vahmani<sup>\*1</sup>, A. D. Jones<sup>1</sup>, and D. Li<sup>2</sup>
 
 <sup>1 </sup> Lawrence Berkeley National Laboratory, One Cyclotron Road, Berkeley, CA 94720, USA.
 
@@ -27,6 +27,7 @@ NARR: this data is used as initial and boundary conditions in WRF simulations. T
 
 ### Output data
 TODO mint DOI and cite
+
 WRF-UCM output data at 1.5 km resolution is available at vahmani-etal_2021_tbd_ET/3.WRF_CA_Outputs.
 
 ## Contributing modeling software
@@ -36,6 +37,7 @@ WRF-UCM output data at 1.5 km resolution is available at vahmani-etal_2021_tbd_E
 
 ## Reproduce my experiment
 TODO clean up
+
 1. Follow the instruction at https://www2.mmm.ucar.edu/wrf/OnLineTutorial/ to Download and compile WRFv3.6.1
 2. Run WRF-UCM over CA for 15 years (2001-2015):
   a. Use NARR reanalysis data (available at https://rda.ucar.edu/datasets/ds608.0/) as initial and boundary conditions. The workflow is available at https://www2.mmm.ucar.edu/wrf/OnLineTutorial/)
@@ -49,6 +51,7 @@ TODO clean up
 
 ## Reproduce my figures
 TODO clean up
+
 Use the scripts found in the `figures` directory to reproduce the figures used in this publication.
 
 | Script Name | Description | How to Run |
