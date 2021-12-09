@@ -24,9 +24,7 @@ P. Vahmani P., A. D. Jones, and D. Li, 2021, Will anthropogenic warming increase
 National Centers for Environmental Prediction/National Weather Service/NOAA/U.S. Department of Commerce (2005), NCEP North American Regional Reanalysis (NARR), https://rda.ucar.edu/datasets/ds608.0/, Research Data Archive at the National Center for Atmospheric Research, Computational and Information Systems Laboratory, Boulder, Colo.
 
 ### Output data
-TODO mint DOI and cite
-
-WRF-UCM output data at 1.5 km resolution is available at vahmani-etal_2021_tbd_ET/3.WRF_CA_Outputs.
+WRF-UCM output data at 1.5 km resolution and supporting files can be accessed via [Globus endpoint](https://app.globus.org/file-manager?origin_id=86d8b02e-5948-11ec-b2c1-1b99bfd4976a&origin_path=%2F).
 
 ## Contributing modeling software
 | Model | Version | Repository Link | DOI |
@@ -34,28 +32,24 @@ WRF-UCM output data at 1.5 km resolution is available at vahmani-etal_2021_tbd_E
 | WRF | 3.6.1 | https://github.com/hanschen/WRFV3 | NA |
 
 ## Reproduce my experiment
-TODO clean up
-
 1. Follow the instruction at https://www2.mmm.ucar.edu/wrf/OnLineTutorial/ to Download and compile WRFv3.6.1
 2. Run WRF-UCM over CA for 15 years (2001-2015):
-    a. Use NARR reanalysis data (available at https://rda.ucar.edu/datasets/ds608.0/) as initial and boundary conditions. The workflow is available at https://www2.mmm.ucar.edu/wrf/OnLineTutorial/)
-    b. To reproduce the configuration used for this study use namelist.input (available at vahmani-etal_2021_tbd_ET/1.namelist) and table of parameters (available at vahmani-etal_2021_tbd_ET/2.tables_edited)
-3. Repeat 2 for 3 scenarios as described in the manuscript. The WRF folders (one for each scenario) with the inputs, parameter tables, and namelists are available at vahmani-etal_2021_tbd_ET:
-    a. S31_base_ens01_WRFRun_2001.tar
-    b. S31_cnrm_ens01_WRFRun_2001.tar
-    c. S31_hadg_ens01_WRFRun_2001.tar
-4. The attribution analysis (Figure 3) could be reproduced using the spreadsheet available at vahmani-etal_2021_tbd_ET:
-    a. All_BarPlot_Attribution_and_PrecChange_v2.xlsx
+    - Use NARR reanalysis data (available at https://rda.ucar.edu/datasets/ds608.0/) as initial and boundary conditions. The workflow is available at https://www2.mmm.ucar.edu/wrf/OnLineTutorial/)
+    - To reproduce the configuration used for this study use the corresponding namelist.input from the folder [1.namelist](1.namelist/) and the table of parameters from the folder [2.tables_edited](2.tables_edited/)
+3. Repeat step 2 for three different scenarios as described in the manuscript. The WRF folders (one for each scenario) with the inputs, parameter tables, and namelists are available via [Globus endpoint](https://app.globus.org/file-manager?origin_id=86d8b02e-5948-11ec-b2c1-1b99bfd4976a&origin_path=%2F):
+    - S31_base_ens01_WRFRun_2001.tar
+    - S31_cnrm_ens01_WRFRun_2001.tar
+    - S31_hadg_ens01_WRFRun_2001.tar
+4. The attribution analysis (Figure 3) can be reproduced using the spreadsheet:
+    - [All_BarPlot_Attribution_and_PrecChange_v2.xlsx](All_BarPlot_Attribution_and_PrecChange_v2.xlsx)
 
 ## Reproduce my figures
-TODO clean up
-
-Use the scripts found in the `figures` directory to reproduce the figures used in this publication.
+Use the scripts from the folder [4.Figures](4.Figures/) to reproduce the figures used in this publication:
 
 | Script Name | Description | How to Run |
 | --- | --- | --- |
-| M01_Variable_Extraction_for_hpc_V2.m | Script to convert NetCDF files to MATLAB files | matlab -nodisplay -nosplash -nodesktop -r "run('M01_Variable_Extraction_for_hpc_V2.m');exit;" |
-| aM01_wrfout_plot_spatial_v4.m | Script to create spatial maps in Figures 2, 4, S1, S2, S4 | matlab -nodisplay -nosplash -nodesktop -r "run(‘aM01_wrfout_plot_spatial_v4.m');exit;" |
-| aM0_wrfout_attribution_of_changes_in_ET_v11.m | Script to create intermediate data on partial differentials presented in the attribution analysis | matlab -nodisplay -nosplash -nodesktop -r "run('aM0_wrfout_attribution_of_changes_in_ET_v11.m');exit;" |
-| aM1_change_spatial.m<br><br>aM2_change_bar.m<br><br>aM3_attribution_bar.m | Scripts to use intermediate data from above to create Figures 3 and S3 | matlab -nodisplay -nosplash -nodesktop -r "run(aM1_change_spatial.m');exit;"<br><br>matlab -nodisplay -nosplash -nodesktop -r "run(aM1_change_bar.m');exit;"<br><br>matlab -nodisplay -nosplash -nodesktop -r "run(aM1_attricution_bar.m');exit;" |
+| M01_Variable_Extraction_for_hpc_V2.m | Script to convert NetCDF files to MATLAB files | `matlab -nodisplay -nosplash -nodesktop -r "run('M01_Variable_Extraction_for_hpc_V2.m');exit;"` |
+| aM01_wrfout_plot_spatial_v4.m | Script to create spatial maps in Figures 2, 4, S1, S2, S4 | `matlab -nodisplay -nosplash -nodesktop -r "run(‘aM01_wrfout_plot_spatial_v4.m');exit;"` |
+| aM0_wrfout_attribution_of_changes_in_ET_v11.m | Script to create intermediate data on partial differentials presented in the attribution analysis | `matlab -nodisplay -nosplash -nodesktop -r "run('aM0_wrfout_attribution_of_changes_in_ET_v11.m');exit;"` |
+| aM1_change_spatial.m<br><br><br>aM2_change_bar.m<br><br><br>aM3_attribution_bar.m | Scripts to use intermediate data from above to create Figures 3 and S3 | `matlab -nodisplay -nosplash -nodesktop -r "run(aM1_change_spatial.m');exit;"`<br><br>`matlab -nodisplay -nosplash -nodesktop -r "run(aM1_change_bar.m');exit;"`<br><br>`matlab -nodisplay -nosplash -nodesktop -r "run(aM1_attricution_bar.m');exit;"` |
 
