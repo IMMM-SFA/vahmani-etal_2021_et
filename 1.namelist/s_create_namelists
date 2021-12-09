@@ -1,0 +1,9 @@
+for i in {2001..2015}
+do
+rm -r $i
+mkdir $i
+cd $i
+cp ../2001_template/namelist.input .
+sed -i "s/2001/$i/g" "namelist.input"
+cd ..
+done
