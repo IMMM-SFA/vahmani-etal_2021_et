@@ -1,4 +1,4 @@
-_your zenodo badge here_
+[![DOI](https://zenodo.org/badge/433596045.svg)](https://zenodo.org/badge/latestdoi/433596045)
 
 # vahmani-etal_2021_et
 
@@ -34,7 +34,7 @@ WRF-UCM output data at 1.5 km resolution and supporting files can be accessed vi
 ## Reproduce my experiment
 1. Follow the instruction at https://www2.mmm.ucar.edu/wrf/OnLineTutorial/ to Download and compile WRFv3.6.1
 2. Run WRF-UCM over CA for 15 years (2001-2015):
-    - Use NARR reanalysis data (available at https://rda.ucar.edu/datasets/ds608.0/) as initial and boundary conditions. The workflow is available at https://www2.mmm.ucar.edu/wrf/OnLineTutorial/)
+    - Use NARR reanalysis data (available at https://rda.ucar.edu/datasets/ds608.0/) as initial and boundary conditions; the workflow is available at https://www2.mmm.ucar.edu/wrf/OnLineTutorial/
     - To reproduce the configuration used for this study use the corresponding namelist.input from the folder [1.namelist](1.namelist/) and the table of parameters from the folder [2.tables_edited](2.tables_edited/)
 3. Repeat step 2 for three different scenarios as described in the manuscript. The WRF folders (one for each scenario) with the inputs, parameter tables, and namelists are available via [Globus endpoint](https://app.globus.org/file-manager?origin_id=86d8b02e-5948-11ec-b2c1-1b99bfd4976a&origin_path=%2F):
     - S31_base_ens01_WRFRun_2001.tar
