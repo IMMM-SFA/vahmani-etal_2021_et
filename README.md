@@ -1,4 +1,4 @@
-_your zenodo badge here_
+[![DOI](https://zenodo.org/badge/433596045.svg)](https://zenodo.org/badge/latestdoi/433596045)
 
 # vahmani-etal_2021_et
 
